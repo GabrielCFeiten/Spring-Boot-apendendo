@@ -17,4 +17,7 @@ public class AlunoService {
         return alunoRepository.findAll();
     }
 
+    public AlunoModel criar(AlunoModel alunoModel){
+        return alunoRepository.save(alunoModel);
+    }
 }
