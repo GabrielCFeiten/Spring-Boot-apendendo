@@ -8,20 +8,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/school")
+@RequestMapping("/alunos")
 public class AlunoController {
 
     @Autowired
     private AlunoService alunoService;
 
     @GetMapping
-    public List<AlunoModel> findALL(){
-        return alunoService.findALL();
+    public List<AlunoModel> findAll() {
+        return alunoService.findAll();
     }
 
     @PostMapping
-    public List<AlunoModel> criar(@RequestBody AlunoModel alunoModel){
+    public AlunoModel criar(@RequestBody AlunoModel alunoModel) {
         return alunoService.criar(alunoModel);
     }
-
 }

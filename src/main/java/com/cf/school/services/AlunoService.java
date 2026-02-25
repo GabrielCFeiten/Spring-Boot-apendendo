@@ -13,11 +13,11 @@ public class AlunoService {
     @Autowired
     private AlunoRepository alunoRepository;
 
-    public List<AlunoModel> findALL(){
+    public List<AlunoModel> findAll() {
         return alunoRepository.findAll();
     }
 
-    public AlunoModel criar(AlunoModel alunoModel){
+    public AlunoModel criar(AlunoModel alunoModel) {
         return alunoRepository.save(alunoModel);
     }
 }
